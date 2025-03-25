@@ -109,8 +109,23 @@ function Sky() {
 }
 
 function BeatSneaker({ beat, position, isActive, onClick }: { beat: Beat; position: [number, number, number]; isActive: boolean; onClick: () => void }) {
+  const artworkPath = beat.artwork || '/artworks/defaultposter.png';
+
   return (
     <group position={position} onClick={onClick}>
+      {/* Artwork Frame */}
+      <mesh position={[0, 4.5, -3.5]}>
+        <boxGeometry args={[1.1, 1.1, 0.1]} />
+        <meshStandardMaterial color="#2a2a2a" />
+      </mesh>
+      {/* Artwork Image */}
+      <mesh position={[0, 4.5, -3.44]}>
+        <planeGeometry args={[1, 1]} />
+        <meshBasicMaterial 
+          map={new THREE.TextureLoader().load(artworkPath)}
+          side={THREE.DoubleSide}
+        />
+      </mesh>
       {/* Black holder */}
       <mesh position={[0, 2.6, -3.5]}>
         <boxGeometry args={[1, 0.2, 1]} />
@@ -120,8 +135,8 @@ function BeatSneaker({ beat, position, isActive, onClick }: { beat: Beat; positi
       <mesh scale={isActive ? 1.1 : 1} position={[0, 3, -3.5]}>
         <boxGeometry args={[0.8, 0.8, 0.8]} />
         <meshStandardMaterial
-          color={isActive ? '#ff3366' : '#ffffff'}
-          emissive={isActive ? '#ff3366' : '#000000'}
+          color={isActive ? '#ff0000' : '#ffffff'}
+          emissive={isActive ? '#ff0000' : '#000000'}
           emissiveIntensity={isActive ? 0.5 : 0}
         />
       </mesh>
@@ -324,7 +339,7 @@ export default function Scene({ beats, onBeatSelect, activeBeat }: SceneProps) {
 
       {/* Custom Cursor */}
       {isLocked && (
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 border border-white rounded-full pointer-events-none" />
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 border border-red-700 rounded-full pointer-events-none" />
       )}
 
       {/* Hitmarker */}

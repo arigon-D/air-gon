@@ -155,7 +155,7 @@ export default function AudioPlayer({ beat, onBeatChange }: AudioPlayerProps) {
   };
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[80%] bg-black/80 backdrop-blur-md rounded-2xl shadow-2xl border border-white/10">
+    <div className="fixed bottom-5 left-1/2 -translate-x-1/2 w-[70%] bg-black/80 backdrop-blur-md rounded-2xl shadow-2xl border border-white/10">
       
       {/* Main Content */}
       <div className="w-full px-8 py-3">
@@ -214,13 +214,13 @@ export default function AudioPlayer({ beat, onBeatChange }: AudioPlayerProps) {
                   <a
                     href={beat.downloadUrl}
                     download
-                    className="px-6 py-2 rounded-full bg-white/20 hover:bg-white/30 text-white font-medium transition-all duration-200 hover:scale-105 block text-center"
+                    className="px-6 py-2 rounded-full bg-red-700 hover:bg-[#ff0000]/80 text-black font-medium transition-all duration-200 hover:scale-105 block text-center"
                   >
                     Download
                   </a>
                 )}
                 {beat.price > 0 && (
-                  <button className="w-full px-6 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-all duration-200 hover:scale-105">
+                  <button className="w-full px-3 py-2 rounded-full bg-red-700 hover:bg-[#ff0000]/80 text-black font-medium transition-all duration-200 hover:scale-105">
                     Buy for €{beat.price}
                   </button>
                 )}

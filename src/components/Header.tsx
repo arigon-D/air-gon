@@ -45,15 +45,19 @@ export default function Header() {
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <div className="flex-1 flex justify-center">
-            <h1 className="text-2xl font-bold text-white tracking-wider hover:text-gray-300 transition-colors cursor-pointer">
-              AIR-GON
-            </h1>
+            <div className="flex items-center">
+              <img 
+                src="/artworks/AIR_GON.svg"
+                alt="AIR-GON Logo"
+                className="h-12 w-auto hover:opacity-80 transition-opacity cursor-pointer"
+              />
+            </div>
           </div>
 
           {/* Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="absolute right-4 p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            className="absolute right-4 p-1.5 rounded-full bg-red-700 hover:bg-[#ff0000]/90 transition-colors"
           >
             <span className="sr-only">Open menu</span>
             {isMenuOpen ? (
@@ -61,7 +65,7 @@ export default function Header() {
                 className="h-5 w-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="black"
               >
                 <path
                   strokeLinecap="round"
@@ -75,7 +79,7 @@ export default function Header() {
                 className="h-5 w-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="black"
               >
                 <path
                   strokeLinecap="round"
@@ -92,7 +96,7 @@ export default function Header() {
             <div ref={menuRef} className="absolute top-12 right-4 w-56 bg-black/95 backdrop-blur-sm rounded-xl shadow-lg ring-1 ring-white/10 overflow-hidden">
               <div className="py-2">
                 <a
-                  href="https://soundcloud.com/your-profile"
+                  href="https://soundcloud.com/air-gon"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors"
@@ -127,7 +131,7 @@ export default function Header() {
           )}
         </div>
       </div>
-      <div className="h-[3px] bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500"></div>
+      <div className="h-[5px] bg-[#ff0000]/20"></div>
     </header>
   );
 } 

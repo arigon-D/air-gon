@@ -10,6 +10,7 @@ export interface Beat {
   downloadUrl?: string; // URL for free download
   createdAt: string;
   updatedAt: string;
+  artwork?: string; // Optional path to artwork image
 }
 
 export interface BeatConfig {

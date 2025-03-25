@@ -13,6 +13,7 @@ export const beatConfig: BeatConfig = {
       downloadUrl: '/downloads/floater.wav',
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
+      artwork: '/artworks/Elien.png'
     },
     {
       id: '2',
