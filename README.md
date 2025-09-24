@@ -23,4 +23,5 @@ I make beats. Mostly hip-hop, sometimes something different.
 
 *This README was crafted by AI* 
 
-[SoundCloud](https://soundcloud.com/arigon-218717047)
+[SoundCloud](https://soundcloud.com/air-gon)
+[YouTube](https://www.youtube.com/@Air-Gon)
